@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.app.dao.ForumDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.app.entity.ForumEntity" id="forumMap">
+        <result property="forumid" column="forumId"/>
+        <result property="status" column="status"/>
+        <result property="type" column="type"/>
+        <result property="businesstype" column="businessType"/>
+        <result property="sourcetype" column="sourceType"/>
+        <result property="sourceid" column="sourceId"/>
+        <result property="name" column="name"/>
+        <result property="intro" column="intro"/>
+        <result property="declare" column="declare"/>
+        <result property="labels" column="labels"/>
+        <result property="showpic" column="showPic"/>
+        <result property="cityname" column="cityName"/>
+        <result property="areaid" column="areaId"/>
+        <result property="areaname" column="areaName"/>
+        <result property="address" column="address"/>
+        <result property="locationxy" column="locationxy"/>
+        <result property="organizationid" column="organizationId"/>
+        <result property="organizationname" column="organizationName"/>
+        <result property="topicnum" column="topicNum"/>
+        <result property="attentionnum" column="attentionNum"/>
+        <result property="memnernum" column="memnerNum"/>
+        <result property="minnum" column="minNum"/>
+        <result property="maxnum" column="maxNum"/>
+        <result property="userid" column="userId"/>
+        <result property="username" column="userName"/>
+        <result property="managers" column="managers"/>
+        <result property="expirationtime" column="expirationTime"/>
+        <result property="config" column="config"/>
+        <result property="remark" column="remark"/>
+        <result property="creator" column="creator"/>
+        <result property="modifier" column="modifier"/>
+        <result property="createtime" column="createTime"/>
+        <result property="modifytime" column="modifyTime"/>
+        <result property="prop1" column="prop1"/>
+        <result property="prop2" column="prop2"/>
+        <result property="prop3" column="prop3"/>
+        <result property="prop4" column="prop4"/>
+        <result property="prop5" column="prop5"/>
+        <result property="prop6" column="prop6"/>
+    </resultMap>
+
+
+</mapper>

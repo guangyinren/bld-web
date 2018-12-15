@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.app.dao.AdDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.app.entity.AdEntity" id="adMap">
+        <result property="id" column="id"/>
+        <result property="createdate" column="createDate"/>
+        <result property="modifydate" column="modifyDate"/>
+        <result property="sort" column="sort"/>
+        <result property="content" column="content"/>
+        <result property="image" column="image"/>
+        <result property="title" column="title"/>
+        <result property="type" column="type"/>
+        <result property="isenabled" column="isEnabled"/>
+        <result property="url" column="url"/>
+        <result property="adpositionid" column="adPositionId"/>
+        <result property="prop1" column="prop1"/>
+        <result property="prop2" column="prop2"/>
+        <result property="prop3" column="prop3"/>
+        <result property="prop4" column="prop4"/>
+    </resultMap>
+
+
+</mapper>

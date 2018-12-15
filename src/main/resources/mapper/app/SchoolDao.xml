@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.app.dao.SchoolDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.app.entity.SchoolEntity" id="schoolMap">
+        <result property="schoolId" column="school_id"/>
+        <result property="type" column="type"/>
+        <result property="code" column="code"/>
+        <result property="name" column="name"/>
+        <result property="enName" column="en_name"/>
+        <result property="shortName" column="short_name"/>
+        <result property="intro" column="intro"/>
+        <result property="province" column="province"/>
+        <result property="city" column="city"/>
+        <result property="town" column="town"/>
+        <result property="adress" column="adress"/>
+        <result property="config" column="config"/>
+        <result property="creator" column="creator"/>
+        <result property="modifier" column="modifier"/>
+        <result property="createTime" column="create_time"/>
+        <result property="modifyTime" column="modify_time"/>
+        <result property="onePrice" column="one_price"/>
+        <result property="twoPrice" column="two_price"/>
+        <result property="threePrice" column="three_price"/>
+        <result property="fourPrice" column="four_price"/>
+        <result property="schoolPrice" column="school__price"/>
+    </resultMap>
+
+
+</mapper>

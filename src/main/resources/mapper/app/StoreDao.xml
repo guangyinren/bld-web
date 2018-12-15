@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.app.dao.StoreDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.app.entity.StoreEntity" id="storeMap">
+        <result property="storeid" column="storeId"/>
+        <result property="status" column="status"/>
+        <result property="type" column="type"/>
+        <result property="userid" column="userId"/>
+        <result property="name" column="name"/>
+        <result property="showpic" column="showPic"/>
+        <result property="level" column="level"/>
+        <result property="authlevel" column="authLevel"/>
+        <result property="labels" column="labels"/>
+        <result property="sortno" column="sortno"/>
+        <result property="resources" column="resources"/>
+        <result property="locationx" column="locationx"/>
+        <result property="locationy" column="locationy"/>
+        <result property="locationname" column="locationName"/>
+        <result property="cityname" column="cityName"/>
+        <result property="ishot" column="isHot"/>
+        <result property="istop" column="isTop"/>
+        <result property="isrecommend" column="isRecommend"/>
+        <result property="commentnum" column="commentNum"/>
+        <result property="sharenum" column="shareNum"/>
+        <result property="collectnum" column="collectNum"/>
+        <result property="praisenum" column="praiseNum"/>
+        <result property="salenum" column="saleNum"/>
+        <result property="membernum" column="memberNum"/>
+        <result property="config" column="config"/>
+        <result property="creator" column="creator"/>
+        <result property="modifier" column="modifier"/>
+        <result property="createtime" column="createTime"/>
+        <result property="modifytime" column="modifyTime"/>
+        <result property="prop1" column="prop1"/>
+        <result property="prop2" column="prop2"/>
+        <result property="prop3" column="prop3"/>
+        <result property="prop4" column="prop4"/>
+        <result property="prop5" column="prop5"/>
+        <result property="prop6" column="prop6"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.app.dao.AttractMerchantDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.app.entity.AttractMerchantEntity" id="attractMerchantMap">
+        <result property="attractmerchantid" column="attractMerchantId"/>
+        <result property="status" column="status"/>
+        <result property="type" column="type"/>
+        <result property="channel" column="channel"/>
+        <result property="userid" column="userId"/>
+        <result property="name" column="name"/>
+        <result property="informinfo" column="informInfo"/>
+        <result property="sourcetype" column="sourceType"/>
+        <result property="sourceid" column="sourceId"/>
+        <result property="resources" column="resources"/>
+        <result property="context" column="context"/>
+        <result property="dealinfo" column="dealInfo"/>
+        <result property="dealresult" column="dealResult"/>
+        <result property="dealuser" column="dealUser"/>
+        <result property="dealtime" column="dealTime"/>
+        <result property="config" column="config"/>
+        <result property="remark" column="remark"/>
+        <result property="creator" column="creator"/>
+        <result property="modifier" column="modifier"/>
+        <result property="createtime" column="createTime"/>
+        <result property="modifytime" column="modifyTime"/>
+        <result property="prop1" column="prop1"/>
+        <result property="prop2" column="prop2"/>
+        <result property="prop3" column="prop3"/>
+        <result property="prop4" column="prop4"/>
+    </resultMap>
+
+
+</mapper>

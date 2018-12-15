@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.app.dao.ImageDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.app.entity.ImageEntity" id="imageMap">
+        <result property="imageId" column="image_id"/>
+        <result property="name" column="name"/>
+        <result property="oldName" column="old_name"/>
+        <result property="suffix" column="suffix"/>
+        <result property="width" column="width"/>
+        <result property="height" column="height"/>
+        <result property="size" column="size"/>
+        <result property="path" column="path"/>
+        <result property="sortno" column="sortno"/>
+        <result property="userId" column="user_id"/>
+        <result property="remark" column="remark"/>
+        <result property="isLink" column="is_link"/>
+        <result property="sourceUrl" column="source_url"/>
+        <result property="config" column="config"/>
+        <result property="creator" column="creator"/>
+        <result property="modifier" column="modifier"/>
+        <result property="createTime" column="create_time"/>
+        <result property="modifyTime" column="modify_time"/>
+        <result property="prop1" column="prop1"/>
+        <result property="prop2" column="prop2"/>
+        <result property="prop3" column="prop3"/>
+        <result property="prop4" column="prop4"/>
+        <result property="prop5" column="prop5"/>
+        <result property="prop6" column="prop6"/>
+    </resultMap>
+
+
+</mapper>

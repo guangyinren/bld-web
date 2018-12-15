@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.app.dao.OrderItemDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.app.entity.OrderItemEntity" id="orderItemMap">
+        <result property="id" column="id"/>
+        <result property="createdate" column="createDate"/>
+        <result property="modifydate" column="modifyDate"/>
+        <result property="name" column="name"/>
+        <result property="image" column="image"/>
+        <result property="productid" column="productId"/>
+        <result property="orderid" column="orderId"/>
+        <result property="price" column="price"/>
+        <result property="quantity" column="quantity"/>
+        <result property="sn" column="sn"/>
+        <result property="prop1" column="prop1"/>
+        <result property="prop2" column="prop2"/>
+        <result property="prop3" column="prop3"/>
+        <result property="prop4" column="prop4"/>
+        <result property="prop5" column="prop5"/>
+        <result property="prop6" column="prop6"/>
+    </resultMap>
+
+
+</mapper>

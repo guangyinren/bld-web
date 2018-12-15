@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.app.dao.RelationUserDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.app.entity.RelationUserEntity" id="relationUserMap">
+        <result property="relationUserId" column="relation_user_id"/>
+        <result property="status" column="status"/>
+        <result property="group" column="group"/>
+        <result property="userId" column="user_id"/>
+        <result property="relationUser" column="relation_user"/>
+        <result property="relationName" column="relation_name"/>
+        <result property="relationRemark" column="relation_remark"/>
+        <result property="headPic" column="head_pic"/>
+        <result property="config" column="config"/>
+        <result property="creator" column="creator"/>
+        <result property="modifier" column="modifier"/>
+        <result property="createTime" column="create_time"/>
+        <result property="modifyTime" column="modify_time"/>
+        <result property="prop1" column="prop1"/>
+        <result property="prop2" column="prop2"/>
+        <result property="prop3" column="prop3"/>
+        <result property="prop4" column="prop4"/>
+    </resultMap>
+	
+	
+	<select id="queryAttentionByKey" resultType="Map">
+		SELECT user_id,username,nickname,headpic_path FROM tb_user WHERE user_id in (SELECT source_id FROM attention WHERE user_id=#{param1} and type='0') AND (username LIKE #{param2} or nickname LIKE #{param2})
+	</select>
+
+</mapper>

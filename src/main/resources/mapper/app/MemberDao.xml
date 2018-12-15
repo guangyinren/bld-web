@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.app.dao.MemberDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.app.entity.MemberEntity" id="memberMap">
+        <result property="id" column="id"/>
+        <result property="createdate" column="createDate"/>
+        <result property="modifydate" column="modifyDate"/>
+        <result property="address" column="address"/>
+        <result property="password" column="password"/>
+        <result property="logindate" column="loginDate"/>
+        <result property="loginip" column="loginIp"/>
+        <result property="username" column="username"/>
+        <result property="birth" column="birth"/>
+        <result property="email" column="email"/>
+        <result property="mobile" column="mobile"/>
+        <result property="registerip" column="registerIp"/>
+        <result property="balance" column="balance"/>
+        <result property="amount" column="amount"/>
+        <result property="weixinopenid" column="weixinOpenId"/>
+        <result property="prop1" column="prop1"/>
+        <result property="prop2" column="prop2"/>
+    </resultMap>
+
+
+</mapper>

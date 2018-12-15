@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.app.dao.SpaceDynamicDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+	<resultMap type="io.renren.modules.app.entity.SpaceDynamicEntity" id="spaceDynamicMap">
+        <result property="spaceDynamicId" column="space_dynamic_id"/>
+        <result property="status" column="status"/>
+        <result property="type" column="type"/>
+        <result property="userId" column="user_id"/>
+        <result property="sourcetype" column="sourceType"/>
+        <result property="sourceid" column="sourceId"/>
+        <result property="content" column="content"/>
+        <result property="sortno" column="sortno"/>
+        <result property="resources" column="resources"/>
+        <result property="location" column="location"/>
+        <result property="praise" column="praise"/>
+        <result property="comment" column="comment"/>
+        <result property="share" column="share"/>
+        <result property="publishTime" column="publish_time"/>
+        <result property="isTop" column="is_top"/>
+        <result property="isHot" column="is_hot"/>
+        <result property="isLink" column="is_link"/>
+        <result property="linkid" column="linkId"/>
+        <result property="config" column="config"/>
+        <result property="creator" column="creator"/>
+        <result property="modifier" column="modifier"/>
+        <result property="createTime" column="create_time"/>
+        <result property="modifyTime" column="modify_time"/>
+        <result property="prop1" column="prop1"/>
+        <result property="prop2" column="prop2"/>
+        <result property="prop3" column="prop3"/>
+        <result property="prop4" column="prop4"/>
+        <result property="prop5" column="prop5"/>
+        <result property="prop6" column="prop6"/>
+    </resultMap>
+
+	<select id="queryFriendDynamic" resultType="Map">
+		SELECT DISTINCT
+		u.user_id,u.headpic_path,u.username,u.nickname,u.viplevel,sd.space_dynamic_id,sd.content,sd.publish_time,sd.location,sd.praise,sd.comment,sd.share,sd.resources,sd.create_time
+		FROM space_dynamic sd,tb_user u,shield sh WHERE (sd.user_id IN (SELECT
+		relation_user from relation_user WHERE user_id =
+		#{userId}) or sd.user_id=#{userId}) and sd.user_id=u.user_id and sd.space_dynamic_id NOT IN (SELECT source_id FROM shield sh WHERE sh.type='0' AND sh.user_id=#{userId})
+		and sd.user_id NOT IN (SELECT source_id FROM shield sh WHERE sh.type='1' AND sh.user_id=#{userId}) ORDER BY sd.create_time desc
+	</select>
+
+	<select id="queryAttentionAccountDynamic" resultType="Map">
+		SELECT DISTINCT
+		u.user_id,u.headpic_path,u.username,u.nickname,u.viplevel,sd.space_dynamic_id,sd.content,sd.publish_time,sd.location,sd.praise,sd.comment,sd.share,sd.resources,sd.create_time
+		FROM space_dynamic sd,tb_user u,shield sh WHERE (sd.user_id IN (SELECT
+		source_id from attention WHERE user_id =
+		#{userId} and type='0') or sd.user_id=#{userId}) and sd.user_id=u.user_id and sd.space_dynamic_id NOT IN (SELECT source_id FROM shield sh WHERE sh.type='0' AND sh.user_id=#{userId})
+		and sd.user_id NOT IN (SELECT source_id FROM shield sh WHERE sh.type='1' AND sh.user_id=#{userId}) ORDER BY sd.create_time desc
+	</select>
+
+	<select id="queryInformPraiseDetail" resultType="Map">
+		SELECT DISTINCT u.user_id,u.headpic_path,u.username,u.level,sd.space_dynamic_id,sd.content,sd.praise FROM tb_user u,space_dynamic sd WHERE u.user_id=#{sourceUser} AND sd.space_dynamic_id=#{sourceId}
+	</select>
+</mapper>

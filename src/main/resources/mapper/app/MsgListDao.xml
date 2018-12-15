@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.app.dao.MsgListDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.app.entity.MsgListEntity" id="msgListMap">
+        <result property="msglistid" column="msgListId"/>
+        <result property="userid" column="userId"/>
+        <result property="status" column="status"/>
+        <result property="title" column="title"/>
+        <result property="touserid" column="toUserId"/>
+        <result property="msgnum" column="msgNum"/>
+        <result property="config" column="config"/>
+        <result property="creator" column="creator"/>
+        <result property="modifier" column="modifier"/>
+        <result property="createtime" column="createTime"/>
+        <result property="modifytime" column="modifyTime"/>
+        <result property="prop1" column="prop1"/>
+        <result property="prop2" column="prop2"/>
+        <result property="prop3" column="prop3"/>
+        <result property="prop4" column="prop4"/>
+    </resultMap>
+
+
+</mapper>

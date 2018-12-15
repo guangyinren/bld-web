@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.app.dao.SpreadLogDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.app.entity.SpreadLogEntity" id="spreadLogMap">
+        <result property="spreadLogId" column="spread_log_id"/>
+        <result property="status" column="status"/>
+        <result property="userId" column="user_id"/>
+        <result property="sourceType" column="source_type"/>
+        <result property="sourceId" column="source_id"/>
+        <result property="place" column="place"/>
+        <result property="price" column="price"/>
+        <result property="num" column="num"/>
+        <result property="rate" column="rate"/>
+        <result property="totalprice" column="totalprice"/>
+        <result property="endprice" column="endprice"/>
+        <result property="startTime" column="start_time"/>
+        <result property="endTime" column="end_time"/>
+        <result property="reason" column="reason"/>
+        <result property="remark" column="remark"/>
+        <result property="creator" column="creator"/>
+        <result property="modifier" column="modifier"/>
+        <result property="createTime" column="create_time"/>
+        <result property="modifyTime" column="modify_time"/>
+    </resultMap>
+
+
+</mapper>

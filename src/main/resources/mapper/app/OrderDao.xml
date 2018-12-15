@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.app.dao.OrderDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.app.entity.OrderEntity" id="orderMap">
+        <result property="id" column="id"/>
+        <result property="type" column="type"/>
+        <result property="address" column="address"/>
+        <result property="expire" column="expire"/>
+        <result property="memberid" column="memberId"/>
+        <result property="areaname" column="areaName"/>
+        <result property="completedate" column="completeDate"/>
+        <result property="consignee" column="consignee"/>
+        <result property="memo" column="memo"/>
+        <result property="phone" column="phone"/>
+        <result property="sn" column="sn"/>
+        <result property="zipcode" column="zipCode"/>
+        <result property="areaid" column="areaId"/>
+        <result property="status" column="status"/>
+        <result property="shippingmethod" column="shippingMethod"/>
+        <result property="shipfee" column="shipFee"/>
+        <result property="shipno" column="shipNo"/>
+        <result property="shipcom" column="shipCom"/>
+        <result property="shipnow" column="shipNow"/>
+        <result property="amount" column="amount"/>
+        <result property="totalprice" column="totalPrice"/>
+        <result property="quantity" column="quantity"/>
+        <result property="createdate" column="createDate"/>
+        <result property="modifydate" column="modifyDate"/>
+        <result property="prop1" column="prop1"/>
+        <result property="prop2" column="prop2"/>
+        <result property="prop3" column="prop3"/>
+        <result property="prop4" column="prop4"/>
+        <result property="prop5" column="prop5"/>
+        <result property="prop6" column="prop6"/>
+    </resultMap>
+
+
+</mapper>

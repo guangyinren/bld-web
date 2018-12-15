@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.app.dao.TopicDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.app.entity.TopicEntity" id="topicMap">
+        <result property="topicId" column="topic_id"/>
+        <result property="status" column="status"/>
+        <result property="forumId" column="forum_id"/>
+        <result property="title" column="title"/>
+        <result property="intro" column="intro"/>
+        <result property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+        <result property="content" column="content"/>
+        <result property="resources" column="resources"/>
+        <result property="location" column="location"/>
+        <result property="praise" column="praise"/>
+        <result property="attentionNum" column="attention_num"/>
+        <result property="comment" column="comment"/>
+        <result property="share" column="share"/>
+        <result property="publishTime" column="publish_time"/>
+        <result property="top" column="top"/>
+        <result property="hot" column="hot"/>
+        <result property="config" column="config"/>
+        <result property="creator" column="creator"/>
+        <result property="modifier" column="modifier"/>
+        <result property="createTime" column="create_time"/>
+        <result property="modifyTime" column="modify_time"/>
+        <result property="prop1" column="prop1"/>
+        <result property="prop2" column="prop2"/>
+        <result property="prop3" column="prop3"/>
+        <result property="prop4" column="prop4"/>
+        <result property="prop5" column="prop5"/>
+        <result property="prop6" column="prop6"/>
+    </resultMap>
+	
+	<select id="queryTopicBySchool" resultType="Map">
+		SELECT u.user_id,u.headpic_path,u.username,u.level,t.* FROM topic t,tb_user u WHERE t.forum_id=(SELECT forum_id FROM forum WHERE source_id=#{schoolId} AND source_type=0) and t.user_id=u.user_id ORDER BY create_time
+	</select>
+
+</mapper>
