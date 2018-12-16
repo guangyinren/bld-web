@@ -147,6 +147,7 @@ public class OrderApiController extends AbstractController {
 			item.setImage(product.getImage());
 			item.setPrice(product.getPrice());
 			item.setCreatedate(new Date());
+			item.setModifydate(new Date());
 			totalprice = totalprice.add(product.getPrice().multiply(BigDecimal.valueOf(item.getQuantity())));
 		}
 		// 是否有默认地址
@@ -171,6 +172,7 @@ public class OrderApiController extends AbstractController {
 		order.setCreatedate(new Date());
 		order.setAmount(totalprice);
 		order.setTotalprice(totalprice);
+		order.setModifydate(new Date());
 		orderService.insert(order);
 		for (int i = 0; i < order.getOrderItems().size(); i++) {
 			order.getOrderItems().get(i).setOrderid(Long.valueOf(order.getId()));
